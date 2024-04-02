@@ -6,8 +6,9 @@ color:
   # terracota: af7452
   # sage green: aec4b4
   # creme: ebe1d3
-  primary: ebe1d3
-  secondary: aec4b4   
+  #
+  primary: 732020
+  secondary: ebe1d3   
   secondary-dark: 333
   muted: 777
 
@@ -15,3 +16,4 @@ color:
 font:
   primary: 'Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif'
   secondary: '"Droid Serif", "Helvetica Neue", Helvetica,Arial,sans-serif'
+  title: '"Cormorant Garamond", serif'
