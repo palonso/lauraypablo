@@ -6,9 +6,15 @@ color:
   # terracota: af7452
   # sage green: aec4b4
   # creme: ebe1d3
+  # olive dark: 5F6F52
   #
-  primary: 732020
+  #
+  #
+  # primary: A58366 
+  # primary: B99470
+  primary: ddb892
   secondary: ebe1d3   
+  # secondary: aec4b4   
   secondary-dark: 333
   muted: 777
 

@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     color: #{{ site.data.template.color.secondary-dark }};
 }
 
@@ -487,6 +487,7 @@ section h3.section-subheading {
 }
 
 .timeline>li .timeline-image {
+    font-size: 40px;
     z-index: 100;
     position: absolute;
     left: 0;
@@ -562,6 +563,7 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-image {
+        font-size: 60px;
         left: 50%;
         width: 100px;
         height: 100px;
@@ -591,6 +593,7 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-image {
+        font-size: 70px;
         width: 150px;
         height: 150px;
         margin-left: -75px;
@@ -617,6 +620,7 @@ section h3.section-subheading {
     }
 
     .timeline>li .timeline-image {
+        font-size: 100px;
         width: 170px;
         height: 170px;
         margin-left: -85px;
@@ -841,6 +845,17 @@ ul.social-buttons li a:active {
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
+}
+
+.form-control{
+    color: #777;
+} 
+
+.my-form-status{
+    margin-top: 20px;
+
+.alert {
+    padding: 2px;
 }
 
 ::-moz-selection {
