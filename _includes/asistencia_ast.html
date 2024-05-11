@@ -1,0 +1,90 @@
+<section id="asistencia">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Confírmanos la to asistencia</h2>
+                    <h3 class="section-subheading text-muted">Amás indícanos si vendrás acompañada/au, si sigues dalguna dieta especial, y ónde t'agospies si t'interesa usar el bus organizáu.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!--<form name="sentMessage" id="contactForm" novalidate>-->
+                    <form id="my-form" action="https://formspree.io/f/moqgyljj" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <input type="text" class="form-control" placeholder="Nome *" id="name" required name="name">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group form-group">
+                                    <input type="email" class="form-control" placeholder="El to email *" id="email" required name="email">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                 <div class="control-group form-group"> 
+                                     <input type="tel" class="form-control" placeholder="El to teléfonu *" id="phone" required name="phone"> 
+                                     <p class="help-block text-danger"></p> 
+                                 </div> 
+                            </div>
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <textarea class="form-control" placeholder="Mensaxe *" id="message" required name="message"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-lg-12 text-center">
+                                <div id="success"></div>
+                                <button type="submit" class="btn btn-xl">Unviar mensaxe</button>
+                            </div>
+                            <div class="col-lg-12 text-center">
+                            <p class="my-form-status" id="my-form-status"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Tu mensaje ha sido enviado, ¡gracias!";
+	  status.innerHTML = "<div class='alert alert-success'>" +
+				  "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" +
+				  "<strong>Tu mensaje ha sido enviado!</strong>" +
+			      "</div>";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+		status.innerHTML = "<div class='alert alert-success'>" +
+					"<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" +
+					"<strong>Ooops! Ha habido un problema con el envío de tu mensaje. Por favor, inténtalo de nuevo.</strong>" +
+				    "</div>";
+            }
+          })
+        }
+      }).catch(error => {
+	  status.innerHTML = "<div class='alert alert-success'>" +
+	  			"<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" +
+	  			"<strong>Ooops! Ha habido un problema con el envío de tu mensaje. Por favor, inténtalo de nuevo.</strong>" +
+	    		    "</div>";
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
