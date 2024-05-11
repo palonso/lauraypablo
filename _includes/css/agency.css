@@ -269,7 +269,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/lauraypablo_indonesia_solos.jpeg');
+    background-image: url('{{ site.baseurl }}/img/lauraypablo_indonesia_solos_hd.jpeg');
     background-position: bottom center;
     background-repeat: none;
     -webkit-background-size: cover;
