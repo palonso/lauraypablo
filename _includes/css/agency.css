@@ -338,7 +338,8 @@ header .intro-text .intro-heading {
 }
 
 section {
-    padding: 100px 0;
+    padding: 100px 0px;
+    padding-bottom: 0px;
 }
 
 section h2.section-heading {
@@ -358,7 +359,8 @@ section h3.section-subheading {
 
 @media(min-width:768px) {
     section {
-        padding: 100px 0;
+        padding: 100px 0px;
+        padding-bottom: 0px;
     }
 }
 
