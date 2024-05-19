@@ -2,8 +2,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Confírmanos la to asistencia</h2>
-                    <h3 class="section-subheading text-muted">Amás indícanos si vendrás acompañada/au, si sigues dalguna dieta especial, y ónde t'agospies si t'interesa usar el bus organizáu.</h3>
+                    <h2 class="section-heading">Confirma'ns la teva assistència</h2>
+                    <h3 class="section-subheading text-muted">A més, indica'ns si vindràs acompanyat/da, si segueixes alguna dieta especial, i on t'allotjaràs si t'interessa utilitzar l'autobús organitzat.</h3>
                 </div>
             </div>
             <div class="row">
@@ -13,28 +13,28 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="control-group form-group">
-                                    <input type="text" class="form-control" placeholder="Nome *" id="name" required name="name">
+                                    <input type="text" class="form-control" placeholder="Nom *" id="name" required name="name">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                 <div class="control-group form-group">
-                                    <input type="email" class="form-control" placeholder="El to email *" id="email" required name="email">
+                                    <input type="email" class="form-control" placeholder="El teu email *" id="email" required name="email">
                                     <p class="help-block text-danger"></p>
                                 </div>
                                  <div class="control-group form-group"> 
-                                     <input type="tel" class="form-control" placeholder="El to teléfonu *" id="phone" required name="phone"> 
+                                     <input type="tel" class="form-control" placeholder="El teu telèfon *" id="phone" required name="phone"> 
                                      <p class="help-block text-danger"></p> 
                                  </div> 
                             </div>
                             <div class="col-md-6">
                                 <div class="control-group form-group">
-                                    <textarea class="form-control" placeholder="Mensaxe *" id="message" required name="message"></textarea>
+                                    <textarea class="form-control" placeholder="Missatge *" id="message" required name="message"></textarea>
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Unviar mensaxe</button>
+                                <button type="submit" class="btn btn-xl">Enviar missatge</button>
                             </div>
                             <div class="col-lg-12 text-center">
                             <p class="my-form-status" id="my-form-status"></p>
@@ -61,10 +61,10 @@
         }
       }).then(response => {
         if (response.ok) {
-          status.innerHTML = "El to mensaxe foi enviáu, ¡gracies!";
+          status.innerHTML = "El teu missatge ha estat enviat, gràcies!";
 	  status.innerHTML = "<div class='alert alert-success'>" +
 				  "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" +
-				  "<strong>Tu mensaje ha sido enviado!</strong>" +
+				  "<strong>El teu missatge ha estat enviat!</strong>" +
 			      "</div>";
           form.reset()
         } else {
@@ -74,7 +74,7 @@
             } else {
 		status.innerHTML = "<div class='alert alert-success'>" +
 					"<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" +
-					"<strong>Ooops! Hebo  un problema col unvíu del to mensaxe. Por favor, inténtalo de nuevo.</strong>" +
+					"<strong>Ooops! Hi ha hagut un problema amb l'enviament del teu missatge. Si us plau, torna-ho a intentar.</strong>" +
 				    "</div>";
             }
           })
@@ -82,7 +82,7 @@
       }).catch(error => {
 	  status.innerHTML = "<div class='alert alert-success'>" +
 	  			"<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;</button>" +
-				"<strong>Ooops! Hebo  un problema col unvíu del to mensaxe. Por favor, inténtalo de nuevo.</strong>" +
+	  			"<strong>Ooops! Hi ha hagut un problema amb l'enviament del teu missatge. Si us plau, torna-ho a intentar.</strong>" +
 	    		    "</div>";
       });
     }
